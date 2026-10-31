@@ -1,0 +1,11 @@
+name: prova
+on:
+  push:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  prova:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "runner assegnato" && uname -a
