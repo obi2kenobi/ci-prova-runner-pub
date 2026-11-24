@@ -1,24 +1,32 @@
 # Guida LLM — ci-prova-runner-pub
 
-Stato: R4 (passi 6 e 9). Base: 0c4600e1e743232fbfaf79e4e6ecc501305709f0, ramo op/M-011-1.
+Stato: audit documenti (ramo docs/audit-g7-2026-11). Base: origin/main.
 
-## Struttura reale
-- `.github/workflows/prova.yml` — workflow `prova`, trigger push e workflow_dispatch, permissions contents: read, job `prova` su ubuntu-latest che esegue `echo "runner assegnato" && uname -a`.
-- `docs/_guida-lista.txt` — intestazione vuota (solo intestazione, 0 righe dati).
-- `docs/_inventario.tsv` — solo intestazione `documento righe ultimo_commit`, 0 righe dati.
-- `docs/_revisione.tsv` — solo intestazione `file classe affermazione atteso trovato esito`, 0 righe dati.
-- Non esiste `docs/archivio/` (verificato: ls docs/archivio → nessun output / assente).
+## Scopo
+Repo di prova per un workflow GitHub Actions minimo: job `prova` su `ubuntu-latest` che esegue `echo "runner assegnato" && uname -a` al push o al workflow_dispatch.
 
-## Comandi eseguiti e esito
-- `git status` → albero pulito, branch op/M-011-1 (VERDE).
-- `git log --oneline -3` → 8fb035b docs: revisione documenti guida; 770b45e docs: inventario e selezione guide; 0c4600e prova runner (VERDE).
-- `ls docs/` → _guida-lista.txt, _inventario.tsv, _revisione.tsv (VERDE).
-- `ls docs/archivio/` → assente (non verificato come presente).
-- Nessun comando di build/test eseguito: nessun test nel repo (nessun package.json/Makefile).
+## Mappa dei file
+- `.github/workflows/prova.yml` — workflow `prova`, trigger `push` e `workflow_dispatch`, `permissions: contents: read`, job `prova` su `ubuntu-latest`, un solo step senza checkout.
+- `docs/LLM-GUIDA.md` — questa guida.
+- `docs/_inventario.tsv` — solo intestazione `documento righe ultimo_commit` (0 righe dati).
+- `docs/_revisione.tsv` — solo intestazione `file classe affermazione atteso trovato esito` (0 righe dati).
+- `docs/_guida-lista.txt` — solo intestazione (0 righe dati).
+- `README.md` — scopo, requisiti, installazione, uso, struttura.
 
-## Documenti superati
-Nessun documento in `docs/archivio/` da elencare (directory assente).
+## Entry point
+Nessun codice eseguibile: l'unico entry point è il workflow `.github/workflows/prova.yml`. Non esiste package.json, Makefile, test o build.
 
-## Note
-- Workflow non esplorato altrove; usa `ubuntu-latest` e non ha step di checkout.
-- Comandi di verifica non eseguiti oltre a quelli sopra: evitare affermazioni non verificate.
+## Comandi di test/avvio
+Nessun test nel repo. Avvio manuale del workflow: `gh workflow run prova`. Verifica automatica: nessuna.
+
+## Convenzioni
+- Permesso minimo: `contents: read`.
+- Nessun checkout step (il workflow non usa codice nel repo).
+
+## Punti delicati
+- Workflow senza checkout: non fa `actions/checkout`, non dipende dal contenuto del repo.
+- Le tabelle `docs/_*.tsv` sono in intestazione vuota: non vanno trattate come dati reali.
+
+## Cosa non toccare
+- Codice/workflow (non è nel perimetro di questo audit).
+- File fuori dal perimetro: solo README.md, docs/**, CLAUDE.md, AGENTS.md, .env.example.
