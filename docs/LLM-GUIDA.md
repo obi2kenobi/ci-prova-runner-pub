@@ -9,7 +9,7 @@ Repo di prova per un workflow GitHub Actions minimo: job `prova` su `ubuntu-late
 - `.github/workflows/prova.yml` — workflow `prova`, trigger `push` e `workflow_dispatch`, `permissions: contents: read`, job `prova` su `ubuntu-latest`, un solo step senza checkout.
 - `README.md` — scopo, requisiti, installazione, uso, struttura (26 righe).
 - `docs/LLM-GUIDA.md` — questa guida.
-- `docs/_inventario.tsv` — intestazione + 2 righe dati (README.md 26 righe, docs/LLM-GUIDA.md 32 righe).
+- `docs/_inventario.tsv` — intestazione + 2 righe dati (README.md 26 righe, docs/LLM-GUIDA.md 33 righe).
 - `docs/_revisione.tsv` — intestazione + 6 righe dati (esito OK tranne una DA CORREGGERE).
 - `docs/_guida-lista.txt` — 2 righe: README.md, docs/LLM-GUIDA.md.
 

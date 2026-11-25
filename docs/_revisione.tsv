@@ -3,5 +3,5 @@ README.md	AGGIORNATO	Workflow prova su ubuntu-latest trigger push+workflow_dispa
 README.md	AGGIORNATO	Workflow usa permissions: contents: read	Contenuto YAML conferma	cat prova.yml: permissions contents: read	OK
 README.md	AGGIORNATO	Nessun checkout step nel workflow	YAML non ha actions/checkout	YAML steps: solo run echo/uname	OK
 docs/LLM-GUIDA.md	AGGIORNATO	Guida menziona .github/workflows/prova.yml come entry point	Entry point sezione indica il workflow	Sezione Entry point: workflow .github/workflows/prova.yml	OK
-docs/LLM-GUIDA.md	AGGIORNATO	Inventario: README.md 26 righe, docs/LLM-GUIDA.md 32 righe	wc -l conferma	wc -l: 26 e 32	OK
+docs/LLM-GUIDA.md	AGGIORNATO	Inventario: README.md 26 righe, docs/LLM-GUIDA.md 33 righe	wc -l conferma	wc -l: 26 e 33	OK
 docs/LLM-GUIDA.md	DA CORREGGERE	Guida afferma _inventario.tsv ha intestazione vuota	Inventario contiene righe dati (README.md, docs/LLM-GUIDA.md)	Inventario: 2 righe dati reali	DIVERSO
