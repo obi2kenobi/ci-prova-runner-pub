@@ -23,4 +23,4 @@ Output atteso nel log del job: riga `runner assegnato` seguita dall'output di `u
 ## Struttura delle cartelle
 - `.github/workflows/prova.yml` — workflow `prova` (trigger push + workflow_dispatch, permissions: contents: read).
 - `docs/LLM-GUIDA.md` — guida per LLM (struttura, comandi, punti delicati).
-- `docs/_inventario.tsv`, `docs/_revisione.tsv`, `docs/_guida-lista.txt` — tabelle di lavoro (solo intestazione, 0 righe dati).
+- `docs/_inventario.tsv`, `docs/_revisione.tsv`, `docs/_guida-lista.txt` — tabelle di lavoro (inventario 2 righe dati, revisione 6 righe dati, lista 2 righe).
