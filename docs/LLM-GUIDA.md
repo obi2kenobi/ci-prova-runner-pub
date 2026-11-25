@@ -31,3 +31,5 @@ Nessun test nel repo. Avvio manuale del workflow: `gh workflow run prova`. Verif
 ## Cosa non toccare
 - Codice/workflow (fuori perimetro).
 - Niente segreti: solo segnaposto.
+
+Rimando istruzioni d'uso: docs/ISTRUZIONI.md
