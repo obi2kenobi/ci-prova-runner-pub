@@ -26,4 +26,4 @@ Output atteso nel log del job: riga `runner assegnato` seguita dall'output di `u
 - `docs/_inventario.tsv`, `docs/_revisione.tsv`, `docs/_guida-lista.txt` — tabelle di lavoro (inventario 2 righe dati, revisione 6 righe dati, lista 2 righe).
 
 ## Istruzioni d'uso
-Vedi docs/ISTRUZIONI.md.
+Vedi docs/ISTRUZIONI.md. Scheda tecnica: docs/SCHEDA-TECNICA.md.

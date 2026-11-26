@@ -33,3 +33,5 @@ Nessun test nel repo. Avvio manuale del workflow: `gh workflow run prova`. Verif
 - Niente segreti: solo segnaposto.
 
 Rimando istruzioni d'uso: docs/ISTRUZIONI.md
+
+Rimando scheda tecnica: docs/SCHEDA-TECNICA.md
